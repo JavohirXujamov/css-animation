@@ -17,6 +17,8 @@ header{
 nav ul li{
     display: inline;
     margin: 0 10px;
+     display: flex;
+     align-items: center; /* Yozuv va rasmni vertikal markazlash */
     }
     nav ul li a{
         color: #1a0d0d;
@@ -25,6 +27,11 @@ nav ul li{
             nav ul{
                 list-style: none;
                 padding: 0;
+                display: flex; /* Elementlarni bir qatorga joylashtirish */
+                justify-content: space-between; /* O'rtada bo'lishi uchun elementlar orasidagi bo'shliqni tenglashtirish */
+                align-items: center; /* Vertikal markazlashtirish */
+                padding: 0; /* Bo'shliqni olib tashlash */
+                list-style: none; /* Ro'yxat belgilari (bullets) ni olib tashlash */
             }
             footer{
                 background-color: #777;
@@ -63,7 +70,12 @@ nav ul li{
                 margin-top: 20px;
                 width: 300px;
                 height: 200px;
-            }
+                
+    
+              margin-left: 10px; /* Yozuv va rasm orasiga bo'shliq qo'shish */
+              object-fit: cover; /* Rasmlar ekran bo'ylab to'liq joylashishi uchun */
+}
+            
             @keyframes colorChange {
                 0% { color: red; }
                 10% { color: rgb(200, 255, 0); }       /* Boshlanishda qizil rang */
